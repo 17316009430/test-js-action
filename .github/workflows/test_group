@@ -1,0 +1,12 @@
+on: [push]
+name: "测试group已经发布到 macketplace 中的 action"
+
+jobs:
+  job_01:
+    runs-on: ubuntu-latest
+    name: "将要测试的 action 来自 group/publish-example-js-action"
+    steps:
+      - name: "调用市场中的 yy-group-publish-example-js-action"
+        # 特别要说明的是 , uses 用的是 仓库地址
+        uses: yy-group-js-action/group-publish-example-js-action@master
+        
