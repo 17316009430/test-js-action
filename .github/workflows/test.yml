@@ -1,0 +1,12 @@
+on: [push]
+name: "测试4548已经公开发布到 macketplace 中的 action"
+
+jobs:
+  job_01:
+    runs-on: ubuntu-latest
+    name: "将要测试的 action 来自 454812511/publish-example-js-action"
+    steps:
+      - name: "调用市场中的 yy-4548-publish-example-js-action"
+        # 特别要说明的是 , uses 用的是 仓库地址
+        uses: 454812511/publish-example-js-action@master
+        
