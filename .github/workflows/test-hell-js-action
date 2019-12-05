@@ -1,0 +1,13 @@
+on: [push]
+name: "测试4548已经发布到 macketplace 中的 hello-js-action "
+
+jobs:
+  job_01:
+    runs-on: ubuntu-latest
+    name: "将要测试的  action 来自 454812511/hello-js-action"
+    steps:
+      - name: "从官网拓扑下的 hello-word"
+        # 特别要说明的是 , uses 用的是 仓库地址 ,不是 marketplace中的名字
+        uses: 454812511/hello-js-action
+        with:
+          milliseconds: 3000
